@@ -2,6 +2,24 @@ package p134_GasStation;
 
 public class GasStation {
     public int canCompleteCircuit(int[] gas, int[] cost) {
+    	int tSum = 0;
+    	int tTotal = 0;
+    	int tIndex = 0;
+    	for(int i = 0; i < gas.length; i++)
+    	{
+    		tSum += gas[i] - cost[i];
+    		tTotal += gas[i] - cost[i];
+    		if(tSum < 0)
+    		{
+    			tIndex = i+1;
+    			tSum = 0;
+    		}
+    	}
+    	if(tTotal < 0)
+    		return -1;
+    	return tIndex;
+    	
+    	/*
         int[] profit = new int[gas.length];
         int totalProfit = 0;
         for(int i = 0; i < profit.length; i++)
@@ -32,5 +50,6 @@ public class GasStation {
         	}
         }
         return index;
+        */
     }
 }
