@@ -1,4 +1,4 @@
-package p82_RemoveDuplicatesFromSortedListII;
+package p082_RemoveDuplicatesFromSortedListII;
 
 class ListNode {
     int val;
