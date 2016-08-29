@@ -1,14 +1,19 @@
 package p000_KMP;
 
 public class KMP {
+	
+	static String str = "eeeeabcee";
+	static String pat = "abc";
+	
 	public static void main(String[] args)
 	{
-		String str = "eeeeabcee";
-		String pat = "abc";
+		
+		
 		int[] next = getNext(pat);
 		//for(int i = 0; i < pat.length(); i++)
 		//	System.out.println(next[i]);
 		int index = kmpSearch(str, pat, next);
+		System.out.println(str);
 		System.out.println(index);
 	}
 	
